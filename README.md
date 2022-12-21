@@ -7,7 +7,7 @@ The goal of this exercise is to demonstrate your QA automation skillset. In this
 1. Fork the repository to your personal github account. 
 2. Using the automation tool of your choice, `e.g. Selenium, Cypress, Playwright`, showcase how you would test this app. All scripts should be saved in the `tests` directory.
 3. Any bugs encountered should be recorded in whichever convention you prefer and included in this repository. 
-4. Once you've completed the work, push it to your forked repository, and submit a pull request to this repository.
+4. Once you've completed the work, push it to your forked repository, and submit a pull request to this repository. Please email us with a link to your pull request once completed.
 
 ## Evaluation Criteria
 
@@ -22,6 +22,9 @@ The goal of this exercise is to demonstrate your QA automation skillset. In this
 - Player with the 'X' mark starts first. The first player to place 3 marks in a vertical, horizontal, or diagonal row wins the game.
 - If all spaces are filled, the game ends in a draw.
 
+## Running Locally
+
+1. open the `index.html` file in a browser of your choice.
 
 ## Credits
 
