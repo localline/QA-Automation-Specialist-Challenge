@@ -1,0 +1,169 @@
+
+    The report below is formatted to be used on Jira.
+    Exploratory test of 01 hour
+    Tester: Oziel Manuel de Souza
+
+Report N 01 - 2022-12-21
+Title: Player X wins the game when it should be a drawn
+Priority: Critical
+Component: Tic-Tac-Toe
+
+(on) Step to reproduce:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 5° cell
+ # Player X - Click at the 7° cell
+ # Player O - Click at the 4° cell
+ # Player X - Click at the 6° cell
+ # Player O - Click at the 8° cell
+ # Player X - Click at the 2° cell
+ # Player O - Click at the 3° cell
+
+(i) Evidence: (https://www.loom.com/share/a23ea5f62b094e4ea1bdf47f2088c164)
+
+(/) Expected Results:
+    The game keeps running and the game ends in drawn
+
+(x) Current Results:
+    The player X wins the game
+
+(!) Reproduced on:
+ Windowns 11 +  Chromer version 108.0.5359.125 (Official Build) (64-bit)
+ main GIT ID: f73f594bafd2129181afea6148579233de577780
+____________________________________________________________________________________________________________
+
+Report N 02 - 2022-12-21
+Title: The player can't win the game using diagonal movement
+Priority: Critical
+Component: Tic-Tac-Toe
+
+(on) Step to reproduce:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 5° cell
+ # Player X - Click at the 8° cell
+ # Player O - Click at the 3° cell
+ # Player X - Click at the 4° cell
+ # Player O - Click at the 7° cell
+
+(i) Evidence: (https://www.loom.com/share/cee056c8669642f983681000ba54c807)
+
+(/) Expected Results:
+    The player O should win the game
+
+(x) Current Results:
+    The game keeps running
+
+(!) Reproduced on:
+ Windowns 11 +  Chromer version 108.0.5359.125 (Official Build) (64-bit)
+ main GIT ID: f73f594bafd2129181afea6148579233de577780
+____________________________________________________________________________________________________________
+
+Report N 03 - 2022-12-21
+Title: The Players cannot restart the game
+Priority: Critical
+Component: Tic-Tac-Toe
+Automation Test Name: MatchCanBeRestarted
+
+(on) Step to reproduce:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 5° cell
+ # Click on the Restart Game button
+
+(i) Evidence: (https://www.loom.com/share/54ed3b7398b344c7873c997c084e1476)
+
+(/) Expected Results:
+    The game is successfully restarted
+
+(x) Current Results:
+    An alert pops up and the game is not restarted
+
+(!) Reproduced on:
+ Windowns 11 +  Chromer version 108.0.5359.125 (Official Build) (64-bit)
+ main GIT ID: f73f594bafd2129181afea6148579233de577780
+____________________________________________________________________________________________________________
+
+Report N 04 - 2022-12-21
+Title: The game status displays the wrong winner name
+Priority: Critical
+Component: Tic-Tac-Toe
+
+(on) Step to reproduce:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 5° cell
+ # Player X - Click at the 4° cell
+ # Player O - Click at the 3° cell
+ # Player X - Click at the 7° cell
+
+(i) Evidence: (https://www.loom.com/share/2e1a491c031f4569a1f6a2a02615a287)
+
+(/) Expected Results:
+    The game status should be "Player X has won!"
+
+(x) Current Results:
+    The game status is "Player O has won!"
+
+(!) Reproduced on:
+ Windowns 11 +  Chromer version 108.0.5359.125 (Official Build) (64-bit)
+ main GIT ID: f73f594bafd2129181afea6148579233de577780
+ ____________________________________________________________________________________________________________
+
+Report N 05 - 2022-12-21
+Title: The player O wins the game when it should be a drawn
+Priority: Critical
+Component: Tic-Tac-Toe
+
+(on) First Step to reproduce:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 2° cell
+ # Player X - Click at the 3° cell
+ # Player O - Click at the 4° cell
+ # Player X - Click at the 5° cell
+ # Player O - Click at the 7° cell
+ # Player X - Click at the 8° cell
+
+(i) Evidence: (https://www.loom.com/share/846ba31d3af54ef1b1ee284d2fc1910d)
+
+(on) Second Step to reproduce, should be fixed by Report 02:
+ # Open the game through the URL https://localline.github.io/QA-Automation-Specialist-Challenge/ 
+ # Perform the follow action order when playing the game
+ # Player X - Click at the 1° cell
+ # Player O - Click at the 2° cell
+ # Player X - Click at the 3° cell
+ # Player O - Click at the 4° cell
+ # Player X - Click at the 5° cell
+ # Player O - Click at the 6° cell
+ # Player X - Click at the 7° cell
+ # Player O - Click at the 8° cell
+ # Player X - Click at the 9° cell
+
+(i) Evidence: (https://www.loom.com/share/5b4d79cef94e4d8e871c90c9d1ad9619)
+
+(/) Expected Results:
+    The game keeps running and the game ends in drawn
+
+(x) Current Results:
+    The player O wins the game
+
+(!) Reproduced on:
+ Windowns 11 +  Chromer version 108.0.5359.125 (Official Build) (64-bit)
+ main GIT ID: f73f594bafd2129181afea6148579233de577780
+ ____________________________________________________________________________________________________________
+
+Additional information about the automated tests
+
+Test Case Name: MatchCanBeRestarted
+
+*The test is currently failing due the bug on report N 03. I created the test because once the bug is fixed it should pass if the alert is not expected.*
+
+Test Case Names: WinMatchWithPlayerO and WinMatchWithPlayerX 
+
+*The tests are currently failling due the bug on report N 04.
