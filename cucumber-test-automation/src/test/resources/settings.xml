@@ -1,0 +1,63 @@
+<settings>
+	<activeProfiles>
+		<activeProfile>securecentral</activeProfile>
+	</activeProfiles>
+	<profiles>
+		<profile>
+			<id>securecentral</id>
+			<!--Override the repository (and pluginRepository) "central" from the
+			 Maven Super POM -->
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>https://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</repository>
+				<repository>
+					<id>spring</id>
+					<url>https://repo.spring.io/plugins-release</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central</id>
+					<name>Maven Plugin Repository</name>
+					<url>https://repo1.maven.org/maven2</url>
+					<layout>default</layout>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<id>spring</id>
+					<name>Maven Plugin Repository</name>
+					<url>https://repo.spring.io/plugins-release</url>
+					<layout>default</layout>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+        <id>SUREFIRE-1588</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+        </properties>
+    </profile>
+	</profiles>
+</settings>
