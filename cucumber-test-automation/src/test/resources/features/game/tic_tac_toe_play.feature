@@ -5,7 +5,7 @@ Business Need: A user can play a game called Tic Tac Toe
     # | X | X | X |
     # | O |   |   |
     # | O | O |   |
-  @play @player-x @test
+  @play @player-x @test @e2e
   Scenario: Player X wins the Tic Tac Toe Game
     Given User launch tic-tac-toe game
     Given it is X player's turn
@@ -26,7 +26,7 @@ Business Need: A user can play a game called Tic Tac Toe
     # | X |   | O |
     # | X | O |   |
     # | O |   | X |
-  @play @player-o @test
+  @play @player-o @test @e2e
   Scenario: Player O wins the Tic Tac Toe Game
     Given User launch tic-tac-toe game
     Given it is X player's turn
@@ -53,7 +53,7 @@ Business Need: A user can play a game called Tic Tac Toe
     # | X | O | X |
     # | O | O | X |
     # | X | X | O |
-  @play @draw-game @test
+  @play @draw-game @test @e2e
   Scenario: The game ended up in a draw results
     Given User launch tic-tac-toe game
     Given it is X player's turn
@@ -85,3 +85,19 @@ Business Need: A user can play a game called Tic Tac Toe
     When Player X clicks on cell number BOTTOM_CENTER
 
     Then the game resulted to draw
+
+
+  @play @reset-game @test @e2e
+  Scenario: The user able to reset the tic-tac-toe game
+    Given User launch tic-tac-toe game
+    Given it is X player's turn
+    When Player X clicks on cell number TOP_RIGHT
+    And the user clicked the reset game button
+    Then the game is reset
+
+
+  @play @newly-launched @test @e2e
+  Scenario: The user validate newly launched game
+    Given User launch tic-tac-toe game
+    And user views the home screen
+    Then the cells are empty

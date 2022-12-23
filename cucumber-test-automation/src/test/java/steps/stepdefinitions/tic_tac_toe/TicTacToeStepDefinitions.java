@@ -38,5 +38,26 @@ public class TicTacToeStepDefinitions {
     }
 
 
+    @Given("^the user clicked the reset game button$")
+    public void click_reset_game(){
+        playTicTacToeSteps.click_reset_game_button();
+    }
+
+
+    @Then("the game is reset")
+    @Then("^the cells are empty$")
+    public void game_is_reset(){
+        playTicTacToeSteps.board_is_empty();
+    }
+
+    @Given("^user views the home screen$")
+    public void view_home_screen(){
+        playTicTacToeSteps.view_home_screen();
+    }
+
+
+    public void validate_cells_are_empty(){
+        playTicTacToeSteps.board_is_empty();
+    }
 
 }

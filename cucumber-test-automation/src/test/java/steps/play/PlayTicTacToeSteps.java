@@ -35,4 +35,20 @@ public class PlayTicTacToeSteps extends BaseRunner {
     public void validateGameIsDraw() {
         Assert.assertEquals("Game ended in a draw!", webUtil.doActionGetText(FileUtil.getXPathAndUpdate("game.status")));
     }
+
+    public void click_reset_game_button() {
+        webUtil.doActionClick(FileUtil.getXPathAndUpdate("game.button.class","game--restart"));
+    }
+
+    public void board_is_empty() {
+        for(GridLocation gridCell : GridLocation.values()) {
+            String cellValue = webUtil.doActionGetText(FileUtil.getXPathAndUpdate("tic.tac.toe.cell", gridCell.getCellNumber()));
+            LogUtil.info(this, String.format("The value of cell is  [%s]", cellValue));
+            Assert.assertEquals("", cellValue);
+        }
+    }
+
+    public void view_home_screen() {
+        Assert.assertEquals("It's X's turn", webUtil.doActionGetText(FileUtil.getXPathAndUpdate("game.status")));
+    }
 }
