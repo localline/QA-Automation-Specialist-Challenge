@@ -1,0 +1,25 @@
+{
+  "name": "qa-automation-specialist-challenge",
+  "version": "1.0.0",
+  "description": "QA Automation Tic Tac Toe Challenge",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pruthviparsi/QA-Automation-Specialist-Challenge.git"
+  },
+  "author": "Pruthvi Parsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pruthviparsi/QA-Automation-Specialist-Challenge/issues"
+  },
+  "homepage": "https://github.com/pruthviparsi/QA-Automation-Specialist-Challenge#readme",
+  "dependencies": {
+    "cypress": "9.0"
+  }
+}
