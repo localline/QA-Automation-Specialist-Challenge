@@ -26,8 +26,7 @@ export class PageTicTacToe implements IPage {
     /**
     * Instantiates an object of the class.
     * @param page - The framework's Page object.
-    * @param environment - The environment which the test is executed against.
-    * @param urlOverriding - Indicates an updated URL to navigate to (optional parameter). If not provided a class-defined default value will be used.
+    * @param url - the URL of the game page
     */
     constructor (page: Page, url: string) {
 
