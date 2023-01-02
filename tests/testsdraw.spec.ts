@@ -93,7 +93,7 @@ test.describe('Validate test scenarios where a draw between players is expected'
         await pageTicTacToe.PlayersDrawIsDisplayed();
     })
     // defect
-    test.only('Draw - test scenario 6', async ({ page }) => {
+    test('Draw - test scenario 6', async ({ page }) => {
 
         await pageTicTacToe.cellZeroTwo.click();
         await pageTicTacToe.cellZeroZero.click();
