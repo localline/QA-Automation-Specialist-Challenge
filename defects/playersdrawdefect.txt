@@ -1,0 +1,25 @@
+Defect Name - Players draw does not occur when expected
+
+Description:
+A particular test scenario where a draw between players X and O is expected fails
+
+Steps to reproduce:
+- Using a zero-based index matrix, fill the grid in the particular order:
+    X in zero-two
+    O in zero-zero
+    X in two-two
+    O in two-zero
+    X in one-zero
+    O in one-two
+    X in two-one
+    O in zero-one
+    X in one-one
+
+Expected behavior:
+"Game ended in a draw!" message should be displayed
+
+Actual/observed behavior:
+"Player O has won!" message is displayed
+
+notes:
+see attached screenshot for visual representation of the defect (players_draw_defect_1.png file)

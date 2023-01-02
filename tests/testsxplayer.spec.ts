@@ -24,7 +24,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoZero.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     // defect
     test('X player wins by diagonal - top left -> bottom right', async ({ page }) => {
@@ -36,7 +36,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoTwo.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     // defect
     test('X player wins by vertical - left', async ({ page }) => {
@@ -48,7 +48,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoZero.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     // defect
     test('X player wins by vertical - middle', async ({ page }) => {;
@@ -60,7 +60,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoOne.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     // defect
     test('X player wins by vertical - right', async ({ page }) => {
@@ -72,7 +72,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoTwo.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     //defect
     test('X player wins by horizontal - top', async ({ page }) => {
@@ -84,7 +84,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellZeroTwo.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     //defect
     test('X player wins by horizontal - middle', async ({ page }) => {
@@ -96,7 +96,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellOneTwo.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
     //defect
     test('X player wins by horizontal - bottom', async ({ page }) => {
@@ -108,6 +108,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.cellTwoTwo.click();
 
         // 'player X has won message' should be displayed
-        await pageTicTacToe.PlayerXWon();
+        await pageTicTacToe.PlayerXWonIsDisplayed();
     })
 });

@@ -22,6 +22,7 @@ export class PageTicTacToe implements IPage {
     readonly messageItsOTurn: Locator;
     readonly messageXWon: Locator;
     readonly messageOWon: Locator;
+    readonly messagePlayersDraw: Locator;
 
     /**
     * Instantiates an object of the class.
@@ -47,9 +48,10 @@ export class PageTicTacToe implements IPage {
         this.buttonRestartGame = page.getByRole('button', { name: 'Restart Game' });
 
         this.messageItsXTurn = page.getByRole('heading', { name: 'It\'s X\'s turn' });
-        this.messageItsOTurn = page.getByRole('heading', { name: 'It\'s O\'s turn' })
+        this.messageItsOTurn = page.getByRole('heading', { name: 'It\'s O\'s turn' });
         this.messageXWon = page.getByRole('heading', { name: 'Player X has won!' });
-        this.messageOWon = page.getByRole('heading', { name: 'Player O has won!' })
+        this.messageOWon = page.getByRole('heading', { name: 'Player O has won!' });
+        this.messagePlayersDraw = page.getByRole('heading', { name: 'Game ended in a draw!' });
 
         page.on('dialog', dialog => {
             console.log(`Dialog message: ${dialog.message()}`);
@@ -104,12 +106,16 @@ export class PageTicTacToe implements IPage {
         await expect(this.messageItsOTurn).toBeVisible();
     }
 
-    async PlayerXWon() {
+    async PlayerXWonIsDisplayed() {
         await expect(this.messageXWon).toBeVisible();
     }    
 
-    async PlayerOWon() {
+    async PlayerOWonIsDisplayed() {
         await expect(this.messageOWon).toBeVisible();
+    } 
+
+    async PlayersDrawIsDisplayed() {
+        await expect(this.messagePlayersDraw).toBeVisible();
     } 
 
 }
