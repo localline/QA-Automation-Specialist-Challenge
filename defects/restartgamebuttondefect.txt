@@ -1,0 +1,21 @@
+Defect Name - Restart Game button click does not work as intended
+
+Description:
+On Restart Game button click the expected behavior/action does not occur
+
+Steps to reproduce:
+- Fill out the grid with one or more entries (one X and one O for example)
+- Click on Restart Game button
+- Notice how a dialog with an error message is displayed
+- Notice how the grid is not reloaded
+
+Expected behavior:
+- Grid should be cleared of all entries and reloaded to an empty state
+- No errors should be thrown/displayed
+
+Actual/observed behavior:
+- Grid is not cleared
+- An error is thrown/displayed on screen
+
+notes:
+see attached screenshot for visual representation of the defect (restart_game_button_click_1.png file)

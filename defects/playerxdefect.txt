@@ -1,0 +1,18 @@
+Defect Name - Player X does not win when expected
+
+Description:
+This is a defect for all game possibilities when player X should win (message that player X won is displayed) but does not
+
+Steps to reproduce:
+- Fill out the grid in such a way that player X should win, for example player X chooses 3 consecutive cells vertically before 
+player O has a chance to do so himself
+- Notice how "Player O has has won!" message is displayed
+
+Expected behavior:
+"Player X has won!" message should be displayed
+
+Actual/observed behavior:
+"Player O has won!" message is displayed
+
+notes:
+see attached screenshot for visual representation of the defect
