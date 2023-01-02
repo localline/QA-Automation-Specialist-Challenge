@@ -5,10 +5,15 @@ import { PageTicTacToe } from '../pages/tictactoe';
 
 test.describe('Validate TicTacToe page on load', () => {
 
-    test('Game - validate page on load', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
+    var pageTicTacToe;
+
+    test.beforeEach(async ({ page }) => {
+
+        pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
         await pageTicTacToe.goto();
+    })
+
+    test('Game - validate page on load', async ({ page }) => {
 
         await pageTicTacToe.ValidateUIOnLoad();
     })
@@ -16,10 +21,15 @@ test.describe('Validate TicTacToe page on load', () => {
 
 test.describe('Validate \"\It\'s X\'s turn\" and \"It\'s O\'s turn\" are correctly displayed', () => { 
 
-    test('Validate messages are correctly displayed', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
+    var pageTicTacToe;
+
+    test.beforeEach(async ({ page }) => {
+
+        pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
         await pageTicTacToe.goto();
+    })
+
+    test('Validate messages are correctly displayed', async ({ page }) => {
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.ItsOTurnIsDisplayed();
@@ -31,11 +41,16 @@ test.describe('Validate \"\It\'s X\'s turn\" and \"It\'s O\'s turn\" are correct
 });
 
 test.describe('Validate test scenarios where X player is expected to win', () => {
+
+    var pageTicTacToe;
+
+    test.beforeEach(async ({ page }) => {
+
+        pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
+        await pageTicTacToe.goto();
+    })    
     // defect
     test('X player wins by diagonal - top right -> bottom left', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroOne.click();
@@ -50,9 +65,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     // defect
     test('X player wins by diagonal - top left -> bottom right', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroOne.click();
@@ -65,9 +77,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     // defect
     test('X player wins by vertical - left', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroOne.click();
@@ -79,10 +88,7 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
         await pageTicTacToe.PlayerXWon();
     })
     // defect
-    test('X player wins by vertical - middle', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
+    test('X player wins by vertical - middle', async ({ page }) => {;
 
         await pageTicTacToe.cellZeroOne.click();
         await pageTicTacToe.cellZeroTwo.click();
@@ -95,9 +101,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     // defect
     test('X player wins by vertical - right', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroTwo.click();
         await pageTicTacToe.cellZeroOne.click();
@@ -110,9 +113,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     //defect
     test('X player wins by horizontal - top', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellOneZero.click();
@@ -125,9 +125,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     //defect
     test('X player wins by horizontal - middle', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellOneZero.click();
         await pageTicTacToe.cellZeroZero.click();
@@ -140,9 +137,6 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
     })
     //defect
     test('X player wins by horizontal - bottom', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellTwoZero.click();
         await pageTicTacToe.cellOneZero.click();
@@ -156,11 +150,16 @@ test.describe('Validate test scenarios where X player is expected to win', () =>
 });
 
 test.describe('Validate test scenarios where O player is expected to win', () => {
+
+    var pageTicTacToe;
+
+    test.beforeEach(async ({ page }) => {
+
+        pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
+        await pageTicTacToe.goto();
+    })    
     // defect
     test('O player wins by diagonal - top right -> bottom left', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroTwo.click();
@@ -174,9 +173,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     // defect
     test('O player wins by diagonal - top left -> bottom right', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroOne.click();
         await pageTicTacToe.cellZeroZero.click();
@@ -190,9 +186,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     // defect
     test('O player wins by vertical - left', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroOne.click();
         await pageTicTacToe.cellZeroZero.click();
@@ -206,9 +199,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     // defect
     test('O player wins by vertical - middle', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroOne.click();
@@ -222,9 +212,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     // defect
     test('O player wins by vertical - right', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellZeroTwo.click();
@@ -238,9 +225,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     //defect
     test('O player wins by horizontal - top', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellOneZero.click();
         await pageTicTacToe.cellZeroZero.click();
@@ -254,9 +238,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     //defect
     test('O player wins by horizontal - middle', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellZeroZero.click();
         await pageTicTacToe.cellOneZero.click();
@@ -270,9 +251,6 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
     })
     //defect
     test('O player wins by horizontal - bottom', async ({ page }) => {
-    
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
-        await pageTicTacToe.goto();
 
         await pageTicTacToe.cellOneZero.click();
         await pageTicTacToe.cellTwoZero.click();
@@ -288,10 +266,15 @@ test.describe('Validate test scenarios where O player is expected to win', () =>
 
 test.describe('Validate restart game test scenario', () => {
 
-    test.only('Game - Game restarts on \"Restart Game\" button click', async ({ page }) => {
-        
-        const pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
+    var pageTicTacToe;
+
+    test.beforeEach(async ({ page }) => {
+
+        pageTicTacToe = new PageTicTacToe(page, 'https://localline.github.io/QA-Automation-Specialist-Challenge/');
         await pageTicTacToe.goto();
+    })    
+    // defect
+    test('Game - Game restarts on \"Restart Game\" button click', async ({ page }) => {
 
         await pageTicTacToe.cellOneZero.click();
         await pageTicTacToe.cellTwoZero.click();
@@ -302,7 +285,7 @@ test.describe('Validate restart game test scenario', () => {
         
         await pageTicTacToe.buttonRestartGame.click();
 
-        // expect page to refresh and empty previous X/O selections, check a particular cell does not have previously set value
+        // expect page to refresh and discard previous X/O selections, check a particular cell does not have previously set value
         pageTicTacToe.cellOneOne.innerText().then(res => {
             console.log(res);
             expect(res).not.toBe('X');
