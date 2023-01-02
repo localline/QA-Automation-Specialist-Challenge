@@ -51,9 +51,13 @@ export class PageTicTacToe implements IPage {
         this.messageXWon = page.getByRole('heading', { name: 'Player X has won!' });
         this.messageOWon = page.getByRole('heading', { name: 'Player O has won!' })
 
-        page.once('dialog', dialog => {
+        page.on('dialog', dialog => {
             console.log(`Dialog message: ${dialog.message()}`);
-            dialog.dismiss().catch(() => {});
+
+            if (dialog.message().includes('You found an error')) {
+                throw new Error('Unexpected dialog shown, investigate further.');
+            }
+            
           });
     }
 
@@ -86,8 +90,6 @@ export class PageTicTacToe implements IPage {
         await expect(this.messageItsXTurn).toBeVisible();
         
         await expect(this.buttonRestartGame).toBeVisible();
-
-
     }
 
     async goto() {
