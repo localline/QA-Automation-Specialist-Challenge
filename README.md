@@ -1,31 +1,47 @@
-# Local Line QA Challenge
+QA-Automation-Specialist-Challenge
+#### Codes and Test Scripts Prepared by:
+**Dilshod Norqulov**\
+**Software QA Engineer**\
+**dnorqulov@gmail.com**
 
-## Challenge
+**- Build Tool:** Maven
+**- Test Framework:** Cucumber BBD (with JUnit Assertions)
+------------
+##### Environment:
+``
+------------
+#### System Requirements:
+- Java 8 + JDK
+- IntelliJ Cucumber Plugin
+- IntelliJ Gherkin Plugin
+------------
+## Test RUN
+Note: To run the scenarios, use '@start' for starting game feature, '@win' for testing win conditions, '@draw' for checking draw conditions and '@restart' tags for testing restart feature of the game tag for testing all the scenarios in the CukesRunner class/Cucumber Options.
 
-The goal of this exercise is to demonstrate your QA automation skillset. In this repository is a simple pure `.js` game of `tic-tac-toe`. You can see it hosted [here](https://localline.github.io/QA-Automation-Specialist-Challenge/). To complete the challenge, please perform the following.
+#### 1. Way:
+- Clone the project
+- Import maven dependencies from POM
+- Go **tests > java > runners > CukesRunner** and Run
+- To generate "Maven Cucumber HTML Report" ;
+  > Open Maven right side panel
+  > Double Click Project's Lifecycle
+  > Click "verify"
+#### 2. Way:
+- Run from command line invoke `mvn clean verify`
+------------
+## Test Reports Locations
+1- Cucumber HTML Plugin Reports
+**target -> cucumber-html-reports > overview-steps.html**
+(Right Click and Open in any Browser )
+2- When you run my project, Cucumber will create automatically online report link. You can click the link
+and check the all test steps and status.
 
-1. Fork the repository to your personal github account. 
-2. Using the automation tool of your choice, `e.g. Selenium, Cypress, Playwright`, showcase how you would test this app. All scripts should be saved in the `tests` directory.
-3. Any bugs encountered should be recorded in whichever convention you prefer and included in this repository. 
-4. Once you've completed the work, push it to your forked repository, and submit a pull request to this repository. Please email us with a link to your pull request once completed.
+## Bug Reports Locations
+Bug Reports are located in 
+**tests/Defects** Defects package 
 
-## Evaluation Criteria
-
-1) Code style
-2) Test case thoroughness
-3) Bug reporting style
-
-
-## Game Rules
-
-- Two players take turns: placing 'X' and 'O' marks in empty spaces on a 3x3 square grid.
-- Player with the 'X' mark starts first. The first player to place 3 marks in a vertical, horizontal, or diagonal row wins the game.
-- If all spaces are filled, the game ends in a draw.
-
-## Running Locally
-
-1. open the `index.html` file in a browser of your choice.
-
-## Credits
-
-- We've adapted the game from **Aras Güngöre**'s [repository](https://github.com/arasgungore/tic-tac-toe)
+------------
+2023 January;
+github.com/dnorqulov
+### End
+------------
