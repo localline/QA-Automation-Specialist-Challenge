@@ -1,0 +1,26 @@
+{
+  "name": "qa-automation-specialist-challenge",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe Challenge",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:base": "cypress open --env indexUrl=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RawAlsaadi/QA-Automation-Specialist-Challenge.git"
+  },
+  "author": "Rawan Alsaadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RawAlsaadi/QA-Automation-Specialist-Challenge/issues"
+  },
+  "homepage": "https://github.com/RawAlsaadi/QA-Automation-Specialist-Challenge#readme",
+  "devDependencies": {
+    "cypress": "^12.2.0"
+  }
+}
