@@ -53,7 +53,7 @@ describe('Start Playing Tic Tac Toe', () => {
 
   context('Can reset game', () => {
     
-    it.only('Resets', () =>
+    it('Resets', () =>
       tic_tac_toe.validate_draw())
       
   })
