@@ -1,0 +1,40 @@
+Title: Issue001 Incorrect Winner Declared
+
+Issue: Tic Tac Toe game declares incorrect winner
+
+Priority High
+Severity High
+
+Reference: US008 to US0013
+
+Steps to reproduce:
+
+1) Open the Tic Tac Toe game in any browser.
+2) Click on any box to start the game.
+3) Continue playing until a player (either X or O) occupies three 
+   spaces in a row horizontally, vertically, or diagonally.
+4) Observe that the game incorrectly declares the losing player as the winner in the status message below the gameboard.
+
+Expected result:
+
+The game should correctly declare the winning player in the status message below the gameboard when a player occupies three spaces in a row horizontally, vertically, or diagonally.
+
+Actual result:
+
+The game incorrectly declares the losing player as the winner in the status message below the gameboard.
+
+Description:
+
+During testing of the Tic Tac Toe game on various devices and browsers using the Cypress framework, it was observed that the game incorrectly declares the winning player. This issue occurs when a player (either X or O) occupies three spaces in a row horizontally, vertically, or diagonally. The game declares the losing player as the winner in the status message below the gameboard. This issue has been reproduced in test cases US07 to US12.
+
+Web Browser: Chrome 108 (headless)
+
+Device: 2013 Macbook Pro 
+
+System: macOS Big Sur 11.6.6
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.
+
+Thank you for your assistance in resolving this issue.
