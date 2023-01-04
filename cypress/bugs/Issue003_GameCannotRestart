@@ -1,0 +1,41 @@
+Title: Issue003 Game Cannot Restart
+
+Issue: Game does not restart when restart button is clicked.
+
+Priority: Highest 
+Severity: Highest
+
+Reference: US014_ResetGame
+
+Steps to reproduce:
+
+1) Open the Tic Tac Toe game in any browser.
+2) Navigate to the game board and click on any space to place an X.
+3) Observe that it is now Player O's turn.
+4) Click on the restart button to begin a new game.
+5) Observe that the game does not reset and the previous moves are still present on 
+   the gameboard.
+
+Expected result:
+
+Clicking the restart button should reset the gameboard and start a new game with Player X's turn.
+
+Actual result:
+
+The game does not reset and the previous moves are still present on the gameboard.
+
+Description:
+
+While testing the Tic Tac Toe game on Google Chrome, I noticed that the game does not reset when the restart button is clicked. This occurs after a game has been started and the restart button is clicked to begin a new game.
+
+Web Browser: Chrome 108 (headless)
+
+Device: 2013 Macbook Pro 
+
+System: macOS Big Sur 11.6.6
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.
+
+Thank you for your assistance in resolving this issue.

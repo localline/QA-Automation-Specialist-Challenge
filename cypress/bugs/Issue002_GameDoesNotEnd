@@ -1,0 +1,44 @@
+Title: Issue002 Game does not End
+
+Issue: The game still continues after player a has already won.
+
+Priority: Medium
+Severity: Medium
+
+Referece: US006_TheGameEndsAfterWin
+
+Steps to reproduce:
+
+1) Open the Tic Tac Toe game in any browser.
+2) Navigate to the game board and click on the bottom right box to place an X.
+3) Click on the bottom left box to place an O.
+4) Click on the center left box to place another X.
+5) Click on the center middle box to place an O.
+6) Click on the center right box to place another X.
+7) Click on the top right box to place an O.
+8) Observe that the game allows Player X or O to continue playing by clicking on   
+   the top left box, even though the game should have declared a winner.
+
+Expected result:
+
+The game should declare a winner for Player O and prevent any further moves from being made.
+
+Actual result:
+
+The game allows Player X or O to continue playing, even though the game should have ended.
+
+Description:
+
+While testing the Tic Tac Toe game on Google Chrome, I noticed that the game allows Player X or O to continue playing after the game has ended. This occurs when Player X or O has three consecutive X's or O's in a row and the game should declare a winner.
+
+Web Browser: Chrome 108 (headless)
+
+Device: 2013 Macbook Pro 
+
+System: macOS Big Sur 11.6.6
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.
+
+Thank you for your assistance in resolving this issue.
